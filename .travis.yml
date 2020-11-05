@@ -12,4 +12,4 @@ script: yarn validate
 after_script: npx codecov@3
 branches:
   only:
-    - master
+    - main
