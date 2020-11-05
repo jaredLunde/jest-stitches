@@ -1,6 +1,6 @@
 {
   "name": "jest-stitches",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/jaredLunde/jest-stitches#readme",
   "repository": "github:jaredLunde/jest-stitches",
   "bugs": "https://github.com/jaredLunde/jest-stitches/issues",
@@ -20,16 +20,12 @@
     "jest stitches serializer"
   ],
   "main": "dist/main/index.js",
-  "module": "dist/module/index.js",
-  "unpkg": "dist/umd/jest-stitches.js",
   "source": "src/index.js",
   "types": "types/index.d.ts",
   "exports": {
     ".": {
-      "browser": "./dist/module/index.js",
       "import": "./dist/esm/index.mjs",
       "require": "./dist/main/index.js",
-      "umd": "./dist/umd/jest-stitches.js",
       "source": "./src/index.js",
       "types": "./types/index.d.ts",
       "default": "./dist/main/index.js"
@@ -44,7 +40,7 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "npm run build-esm && npm run build-main && npm run build-module",
+    "build": "lundle build",
     "dev": "lundle build -f module,cjs -w",
     "format": "prettier --write \"{,!(node_modules|dist|coverage)/**/}*.{ts,js,md,yml,json}\"",
     "lint": "eslint .",
