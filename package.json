@@ -7,12 +7,23 @@
   "license": "MIT",
   "description": "Jest utilities for @stitches/react",
   "keywords": [
-    "jest stitches"
+    "jest",
+    "stitches",
+    "stitches ui",
+    "jest serializer",
+    "css",
+    "jest css serializer",
+    "jest plugin",
+    "jest assertions",
+    "jest stitches assertions",
+    "jest stitches ui",
+    "jest stitches serializer"
   ],
   "main": "dist/main/index.js",
   "module": "dist/module/index.js",
   "unpkg": "dist/umd/jest-stitches.js",
   "source": "src/index.js",
+  "types": "types/index.d.ts",
   "exports": {
     ".": {
       "browser": "./dist/module/index.js",
@@ -20,13 +31,16 @@
       "require": "./dist/main/index.js",
       "umd": "./dist/umd/jest-stitches.js",
       "source": "./src/index.js",
+      "types": "./types/index.d.ts",
       "default": "./dist/main/index.js"
     },
     "./package.json": "./package.json",
     "./": "./"
   },
   "files": [
-    "/dist"
+    "/dist",
+    "/src",
+    "/types"
   ],
   "sideEffects": false,
   "scripts": {
@@ -68,47 +82,51 @@
   "eslintConfig": {
     "extends": [
       "lunde"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.test.js"
+        ],
+        "settings": {
+          "import/resolver": {
+            "node": {
+              "moduleDirectory": [
+                "node_modules",
+                "src/",
+                "test/"
+              ]
+            },
+            "jest": {
+              "jestConfigFile": "<rootDir>/jest.config.js"
+            }
+          }
+        }
+      }
     ]
   },
   "eslintIgnore": [
     "node_modules",
     "coverage",
     "dist",
-    "/types",
     "test",
     "*.config.js"
   ],
-  "jest": {
-    "moduleDirectories": [
-      "node_modules",
-      "src",
-      "test"
-    ],
-    "testMatch": [
-      "<rootDir>/src/**/?(*.)test.js"
-    ],
-    "collectCoverageFrom": [
-      "**/src/**/*.js"
-    ],
-    "setupFilesAfterEnv": [
-      "./test/setup.js"
-    ],
-    "snapshotResolver": "./test/resolve-snapshot.js",
-    "globals": {
-      "__DEV__": true
-    }
-  },
   "prettier": {
     "semi": false,
     "singleQuote": true,
     "bracketSpacing": false
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.12.5",
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
+    "@stitches/react": "^0.0.2",
     "babel-jest": "latest",
     "cli-confirm": "latest",
     "cz-conventional-changelog": "latest",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
     "eslint": "latest",
     "eslint-config-lunde": "latest",
     "husky": "latest",
@@ -116,8 +134,15 @@
     "lint-staged": "latest",
     "lundle": "latest",
     "prettier": "latest",
+    "pretty-format": "^26.6.2",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-test-renderer": "^17.0.1",
     "standard-version": "latest"
   },
-  "dependencies": {},
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "css": "^3.0.0"
+  },
   "peerDependencies": {}
 }

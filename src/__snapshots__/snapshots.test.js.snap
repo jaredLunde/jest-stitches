@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@stitches/react with DOM elements disabled does not insert styles into DOM element snapshots 1`] = `
+"<button
+  class=\\"_YfjLh scid-fNnBJi\\"
+>
+  <svg
+    class=\\"_STxcQ scid-daJnyW\\"
+  />
+</button>"
+`;
+
+exports[`@stitches/react with DOM elements disabled inserts styles into React test component snapshots 1`] = `
+"._YfjLh {
+  background-color: blue;
+}
+
+._STxcQ {
+  color: yellow;
+}
+
+<button
+  className={
+    Object {
+      \\"_className\\": \\"_YfjLh scid-fNnBJi\\",
+      \\"atoms\\": Array [
+        Object {
+          \\"_className\\": \\"_YfjLh\\",
+          \\"_isGlobal\\": undefined,
+          \\"breakpoint\\": undefined,
+          \\"cssHyphenProp\\": undefined,
+          \\"id\\": \\"backgroundcolorinitial\\",
+          \\"inlineMediaQueries\\": undefined,
+          \\"pseudo\\": undefined,
+          \\"selector\\": \\"\\",
+          \\"toString\\": [Function toStringCachedAtom],
+          \\"value\\": undefined,
+          Symbol(ATOM): true,
+        },
+        \\"scid-fNnBJi\\",
+      ],
+      \\"toString\\": [Function toStringCachedAtom],
+      Symbol(ATOM): true,
+    }
+  }
+>
+  <svg
+    className={
+      Object {
+        \\"_className\\": \\"_STxcQ scid-daJnyW\\",
+        \\"atoms\\": Array [
+          Object {
+            \\"_className\\": \\"_STxcQ\\",
+            \\"_isGlobal\\": undefined,
+            \\"breakpoint\\": undefined,
+            \\"cssHyphenProp\\": undefined,
+            \\"id\\": \\"colorinitial\\",
+            \\"inlineMediaQueries\\": undefined,
+            \\"pseudo\\": undefined,
+            \\"selector\\": \\"\\",
+            \\"toString\\": [Function toStringCachedAtom],
+            \\"value\\": undefined,
+            Symbol(ATOM): true,
+          },
+          \\"scid-daJnyW\\",
+        ],
+        \\"toString\\": [Function toStringCachedAtom],
+        Symbol(ATOM): true,
+      }
+    }
+  />
+</button>"
+`;
+
+exports[`jest-stitches with dom elements inserts styles into DOM element snapshots 1`] = `
+"._YfjLh {
+  background-color: blue;
+}
+
+._STxcQ {
+  color: yellow;
+}
+
+<button
+  class=\\"_YfjLh scid-fNnBJi\\"
+>
+  <svg
+    class=\\"_STxcQ scid-daJnyW\\"
+  />
+</button>"
+`;
+
+exports[`jest-stitches with dom elements inserts styles into React test component snapshots 1`] = `
+"._YfjLh {
+  background-color: blue;
+}
+
+._STxcQ {
+  color: yellow;
+}
+
+<button
+  className={
+    Object {
+      \\"_className\\": \\"_YfjLh scid-fNnBJi\\",
+      \\"atoms\\": Array [
+        Object {
+          \\"_className\\": \\"_YfjLh\\",
+          \\"_isGlobal\\": undefined,
+          \\"breakpoint\\": undefined,
+          \\"cssHyphenProp\\": undefined,
+          \\"id\\": \\"backgroundcolorinitial\\",
+          \\"inlineMediaQueries\\": undefined,
+          \\"pseudo\\": undefined,
+          \\"selector\\": \\"\\",
+          \\"toString\\": [Function toStringCachedAtom],
+          \\"value\\": undefined,
+          Symbol(ATOM): true,
+        },
+        \\"scid-fNnBJi\\",
+      ],
+      \\"toString\\": [Function toStringCachedAtom],
+      Symbol(ATOM): true,
+    }
+  }
+>
+  <svg
+    className={
+      Object {
+        \\"_className\\": \\"_STxcQ scid-daJnyW\\",
+        \\"atoms\\": Array [
+          Object {
+            \\"_className\\": \\"_STxcQ\\",
+            \\"_isGlobal\\": undefined,
+            \\"breakpoint\\": undefined,
+            \\"cssHyphenProp\\": undefined,
+            \\"id\\": \\"colorinitial\\",
+            \\"inlineMediaQueries\\": undefined,
+            \\"pseudo\\": undefined,
+            \\"selector\\": \\"\\",
+            \\"toString\\": [Function toStringCachedAtom],
+            \\"value\\": undefined,
+            Symbol(ATOM): true,
+          },
+          \\"scid-daJnyW\\",
+        ],
+        \\"toString\\": [Function toStringCachedAtom],
+        Symbol(ATOM): true,
+      }
+    }
+  />
+</button>"
+`;
