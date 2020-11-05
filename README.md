@@ -11,11 +11,11 @@
   <a aria-label="Build status" href="https://travis-ci.com/jaredLunde/jest-stitches">
     <img alt="Build status" src="https://img.shields.io/travis/com/jaredLunde/jest-stitches?style=for-the-badge&labelColor=24292e">
   </a>
-  <a aria-label="NPM version" href="https://www.npmjs.com/package/jaredLunde/jest-stitches">
-    <img alt="NPM Version" src="https://img.shields.io/npm/v/jaredLunde/jest-stitches?style=for-the-badge&labelColor=24292e">
+  <a aria-label="NPM version" href="https://www.npmjs.com/package/jaredlunde/jest-stitches">
+    <img alt="NPM Version" src="https://img.shields.io/npm/v/jaredlunde/jest-stitches?style=for-the-badge&labelColor=24292e">
   </a>
   <a aria-label="License" href="https://jaredlunde.mit-license.org/">
-    <img alt="MIT License" src="https://img.shields.io/npm/l/jaredLunde/jest-stitches?style=for-the-badge&labelColor=24292e">
+    <img alt="MIT License" src="https://img.shields.io/npm/l/jaredlunde/jest-stitches?style=for-the-badge&labelColor=24292e">
   </a>
 
 <hr>
