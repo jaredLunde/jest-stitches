@@ -104,7 +104,6 @@
     "bracketSpacing": false
   },
   "devDependencies": {
-    "@lunde/create-pkg": "file:/Users/jared/.npm/_npx/4460af3c3fa0129b/node_modules/@lunde/create-pkg/",
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
     "babel-jest": "latest",
