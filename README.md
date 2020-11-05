@@ -44,10 +44,6 @@ const {styled, css} = createStyled({})
 
 expect.addSnapshotSerializer(serializer)
 
-afterEach(() => {
-  css.dispose()
-})
-
 test('renders with correct styles', () => {
   const Button = styled('button', {
     variants: {
@@ -111,10 +107,6 @@ import {matchers} from 'jest-stitches'
 const {styled, css} = createStyled({})
 // Add the custom matchers provided by 'jest-stitches'
 expect.extend(matchers)
-
-afterEach(() => {
-  css.dispose()
-})
 
 test('renders with correct styles', () => {
   const Button = styled('button', {
