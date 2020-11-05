@@ -1,0 +1,124 @@
+{
+  "name": "jest-stitches",
+  "version": "1.0.0",
+  "homepage": "https://github.com/jaredLunde/jest-stitches#readme",
+  "repository": "github:jaredLunde/jest-stitches",
+  "bugs": "https://github.com/jaredLunde/jest-stitches/issues",
+  "license": "MIT",
+  "description": "Jest utilities for @stitches/react",
+  "keywords": [
+    "jest stitches"
+  ],
+  "main": "dist/main/index.js",
+  "module": "dist/module/index.js",
+  "unpkg": "dist/umd/jest-stitches.js",
+  "source": "src/index.js",
+  "exports": {
+    ".": {
+      "browser": "./dist/module/index.js",
+      "import": "./dist/esm/index.mjs",
+      "require": "./dist/main/index.js",
+      "umd": "./dist/umd/jest-stitches.js",
+      "source": "./src/index.js",
+      "default": "./dist/main/index.js"
+    },
+    "./package.json": "./package.json",
+    "./": "./"
+  },
+  "files": [
+    "/dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "npm run build-esm && npm run build-main && npm run build-module",
+    "dev": "lundle build -f module,cjs -w",
+    "format": "prettier --write \"{,!(node_modules|dist|coverage)/**/}*.{ts,js,md,yml,json}\"",
+    "lint": "eslint .",
+    "prepublishOnly": "cli-confirm \"Did you run 'yarn release' first? (y/N)\"",
+    "prerelease": "npm run validate && npm run build",
+    "release": "git add . && standard-version -a",
+    "test": "jest",
+    "validate": "npm run lint && npm run test -- --coverage"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "**/*.{md,yml,json,eslintrc,prettierrc}": [
+      "prettier --write"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "lunde"
+    ]
+  },
+  "eslintIgnore": [
+    "node_modules",
+    "coverage",
+    "dist",
+    "/types",
+    "test",
+    "*.config.js"
+  ],
+  "jest": {
+    "moduleDirectories": [
+      "node_modules",
+      "src",
+      "test"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/?(*.)test.js"
+    ],
+    "collectCoverageFrom": [
+      "**/src/**/*.js"
+    ],
+    "setupFilesAfterEnv": [
+      "./test/setup.js"
+    ],
+    "snapshotResolver": "./test/resolve-snapshot.js",
+    "globals": {
+      "__DEV__": true
+    }
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "bracketSpacing": false
+  },
+  "devDependencies": {
+    "@lunde/create-pkg": "file:/Users/jared/.npm/_npx/4460af3c3fa0129b/node_modules/@lunde/create-pkg/",
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "babel-jest": "latest",
+    "cli-confirm": "latest",
+    "cz-conventional-changelog": "latest",
+    "eslint": "latest",
+    "eslint-config-lunde": "latest",
+    "husky": "latest",
+    "jest": "latest",
+    "lint-staged": "latest",
+    "lundle": "latest",
+    "prettier": "latest",
+    "standard-version": "latest"
+  },
+  "dependencies": {},
+  "peerDependencies": {}
+}
