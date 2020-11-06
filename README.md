@@ -61,26 +61,6 @@ test('renders with correct styles', () => {
 
 ### Options
 
-#### `classNameReplacer`
-
-`jest-stitches`'s snapshot serializer replaces the hashes in class names with an index so that things like whitespace changes won't break snapshots. It optionally accepts a custom class name replacer, it defaults to the below.
-
-```jsx harmony
-const classNameReplacer = (className, index) => `ui-${index}`
-```
-
-```jsx harmony
-import {createSerializer} from 'jest-stitches'
-
-expect.addSnapshotSerializer(
-  createSerializer({
-    classNameReplacer(className, index) {
-      return `my-new-class-name-${index}`
-    },
-  })
-)
-```
-
 #### `DOMElements`
 
 `jest-stitches`'s snapshot serializer inserts styles and replaces class names in both React and DOM elements. If you would like to disable this behavior for DOM elements, you can do so by passing `{ DOMElements: false }`. For example:
