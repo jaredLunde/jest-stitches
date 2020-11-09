@@ -21,7 +21,7 @@ const getClassNames = (selectors, classes) => {
 const getClassNamesFromTestRenderer = (selectors, {props}) =>
   getClassNames(
     selectors,
-    props ? (props.className || props.class).toString() : null
+    props ? (props.className || props.class || '').toString() : null
   )
 
 const shouldDive = (node) =>
@@ -36,7 +36,9 @@ const getClassNamesFromEnzyme = (selectors, node) => {
   // Find the first node with a className prop
   const components = actualComponent.findWhere(isTagWithClassName)
   const classes =
-    components.length && components.first().prop('className').toString()
+    components.length && components.first().prop('className')
+      ? components.first().prop('className').toString()
+      : components.first().prop('className')
 
   return getClassNames(selectors, classes)
 }
