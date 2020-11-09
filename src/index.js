@@ -61,7 +61,10 @@ export const isReactElement = (val) => {
     val.hasOwnProperty('key')
   ) {
     // Preact X
-    val.$$typeof = Symbol.for('react.test.json')
+    try {
+      val.$$typeof = Symbol.for('react.test.json')
+      // eslint-disable-next-line no-empty
+    } catch (err) {}
     return true
   }
 }
